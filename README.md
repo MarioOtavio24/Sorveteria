@@ -126,5 +126,8 @@ Cobrem a casquinha base, cada sabor e cenários de combinação.
 Imagens do Diagrama de Classe:
 <img width="1312" height="711" alt="Diagrama de Classe" src="https://github.com/user-attachments/assets/010ecc3a-4ef0-4671-bae9-e6ee36506265" />
 
+Imagens do Diagrama de Sequência:
+<img width="910" height="722" alt="Diagrama de Sequencia" src="https://github.com/user-attachments/assets/92710687-417b-4b4a-bb9b-593473cb09f8" />
+
 
 
