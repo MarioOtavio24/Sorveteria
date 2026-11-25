@@ -110,8 +110,8 @@ cd back-end
 
 Cobrem a casquinha base, cada sabor e cenários de combinação.
 
-## Próximos passos
+Imagens do Diagrama de Classe:
+<img width="1312" height="711" alt="Diagrama de Classe" src="https://github.com/user-attachments/assets/010ecc3a-4ef0-4671-bae9-e6ee36506265" />
 
-- [ ] Controle de estoque dos sabores
-- [ ] Cadastro de clientes e formas de pagamento
-- [ ] Novos sabores e tamanhos
+
+
