@@ -89,11 +89,24 @@ Abra no navegador: **http://localhost:8080/sorveteria**
 
 ## API
 
-| Método | Rota | Descrição |
-|---|---|---|
-| GET | `/sorveteria/sabores` | Retorna a base e a lista de sabores |
-| POST | `/sorveteria/sundae/calcular` | Calcula o total sem salvar |
-| POST | `/sorveteria/pedidos` | Finaliza e grava o pedido |
+Base URL local: `http://localhost:8080` (página inicial em `http://localhost:8080/sorveteria`).
+
+| Método | Rota | Descrição | Efeito colateral |
+| :--- | :--- | :--- | :--- |
+| `GET` | `/sorveteria/sabores` | Retorna a base e a lista de sabores | Nenhum (somente leitura) |
+| `POST` | `/sorveteria/sundae/calcular` | Calcula o total sem salvar | Não grava pedido |
+| `POST` | `/sorveteria/pedidos` | Finaliza e grava o pedido | Persiste pedido e gera número |
+
+### Como usar no Front-end
+1. Busque a base e os sabores em `GET /sorveteria/sabores` ao abrir a tela.
+2. Envie a montagem atual para `POST /sorveteria/sundae/calcular` para exibir o valor atualizado antes de confirmar.
+3. Envie para `POST /sorveteria/pedidos` apenas ao finalizar o pedido.
+
+### O que NÃO esperar da API
+- `POST /sorveteria/sundae/calcular` **não** persiste pedidos.
+- Sabores inválidos são rejeitados (`SaborInvalidoException` via `ApiExceptionHandler`) — trate respostas de erro no Front.
+- Não recalcule regras de negócio no Front como fonte final; use o retorno do back-end.
+- Verifique a configuração de CORS (`WebConfig`) e o banco/JDBC antes de testar fluxos de gravação.
 
 Exemplo de corpo para as rotas POST:
 
